@@ -38,43 +38,43 @@ Public Function sConn_Oracle_ZaiNetEOD() As String
 
     Dim File_Path_FILEDSN As String
     
-    File_Path_FILEDSN = "\\porfiler02\shared\PPM\Asset Management - Wind\PhilS_AssetManagementWind\Development\Database\FILEDSN_Oracle_ZNP01\"
+    File_Path_FILEDSN = ""
     
 ''Note  **** the TNS service Name is >>>  ZNP01  <<<
 '
                sConn_Oracle_ZaiNetEOD = "FILEDSN=" & File_Path_FILEDSN & "Oracle_ZNP01.dsn;" & _
-                                "User Id=p20441;" & _
-                                "Password=nike1234;"
+                                "User Id=;" & _
+                                "Password=;"
                                 
                      Debug.Print sConn_Oracle_ZaiNetEOD
 
 '
 '       sConn_Oracle_ZaiNetEOD = "DSN=My_Data_Name;" & _
-'                                "User Id=p20441;" & _
-'                                "Password=nike1234;"
+'                                "User Id=;" & _
+'                                "Password=;"
                                 
        
        
 ''DNS-Less connection
 '        sConn_Oracle_ZaiNetEOD = "Driver={Oracle in OraHome92};" & _
-'                                 "Server=ZNP01;" & _
-'                                 "Uid=p20441;" & _
-'                                 "Pwd=nike1234;"
+'                                 "Server=;" & _
+'                                 "Uid=;" & _
+'                                 "Pwd=;"
                                 
                                 
  '        sConn_Oracle_ZaiNetEOD = "Provider=OraOLEDB.Oracle;" & _
                                  "Data Source=(DESCRIPTION=(CID=GTU_APP)(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP))) " & _
                                  "(CONNECT_DATA=(SID=MyOracleSID)(SERVER=DEDICATED)));" & _
                                  "(HOST=myHost)(PORT=myPort)))" & _
-                                 "Server=ZNP01;" & _
-                                 "User Id=p20441;" & _
-                                 "Password=nike1234;"
+                                 "Server=;" & _
+                                 "User Id=;" & _
+                                 "Password=;"
 
 ''OraOLEDB
 '            sConn_Oracle_ZaiNetEOD = "Provider=OraOLEDB.Oracle;" & _
-'                                    "Data Source=ZNP01;" & _
-'                                    "User Id=p20441;" & _
-'                                    "Password=test1234;"
+'                                    "Data Source=Z;" & _
+'                                    "User Id=;" & _
+'                                    "Password=;"
                                               
 End Function
 Public Function sWebTrader_OLEDB()
@@ -82,13 +82,9 @@ Public Function sWebTrader_OLEDB()
 
         sWebTrader_OLEDB = "Provider=sqloledb;" & _
                     "Data Source=208.254.145.33;" & _
-                    "Initial Catalog=ppm_operational;" & _
-                    "User Id=PPMClient;" & _
-                    "Password=P5EPheyu;"
-
-
-        'Provider=sqloledb;Data Source=208.254.145.33;Initial Catalog=myDataBase;User Id=myUsername;Password=myPassword;
-        ' Provider=sqloledb;Data Source=208.254.145.33;Initial Catalog=ppm_operational;Password=P5EPheyu;
+                    "Initial Catalog=;" & _
+                    "User Id=;" & _
+                    "Password=;"
 
 
 End Function
@@ -107,9 +103,9 @@ Public Function sWebTrader_ODBC_DSN_Less()
 
     sWebTrader_ODBC_DSN_Less = "ODBC;Driver={SQL Server}" & _
                                 ";Server=208.254.145.33;" & _
-                                ";Database=ppm_operational" & _
-                                ";Uid=PPMClient" & _
-                                ";Pwd=P5EPheyu;"
+                                ";Database=" & _
+                                ";Uid=" & _
+                                ";Pwd=;"
            
 End Function
 
@@ -117,15 +113,15 @@ Public Function sPI_OLEDB()
 
         'sWebTrader_ODBC_DSN_Less = "ODBC;Driver={SQL Server}" & _
                                 ";Server=208.254.145.33;" & _
-                                ";Database=ppm_operational" & _
-                                ";Uid=PPMClient" & _
-                                ";Pwd=P5EPheyu;"
+                                ";Database=" & _
+                                ";Uid=" & _
+                                ";Pwd=;"
 
 
             sPI_OLEDB = "Provider = PIOLEDB" & vbCrLf & _
                       "; Data Source = 172.16.54.162" & _
-                      "; User ID =p20441" & _
-                      "; Password=Phil!" & _
+                      "; User ID =" & _
+                      "; Password=" & _
                       "; Timestamp Interval Start = True" & _
                       "; Keep Default Ordering = False" & _
                       "; Time Zone = Server"
