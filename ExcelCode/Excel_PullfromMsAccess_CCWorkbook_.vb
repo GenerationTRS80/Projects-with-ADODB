@@ -704,7 +704,7 @@ End Sub
 
 Public Sub Protect_Unprotect(intProtect As String)
     Dim strPwd As String
-    strPwd = "focus"
+            strPwd = "TempPassword"
 
     Sheets("Notes").Select
         ActiveSheet.Protect Password:=strPwd, DrawingObjects:=intProtect, Contents:=intProtect, Scenarios:=intProtect
@@ -726,67 +726,3 @@ Public Sub Protect_Unprotect(intProtect As String)
     End Sub
 
 
-Public Sub zzObsolete_PasteValues(Optional inMessage As Boolean)
-    Sheets("FTE Roster").Select
-    Range("D7:K7").Select
-    Range(Selection, Selection.End(xlDown)).Select
-    Selection.Copy
-    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
-        :=False, Transpose:=False
-    Range("M7:O7").Select
-    Range(Selection, Selection.End(xlDown)).Select
-    Application.CutCopyMode = False
-    Selection.Copy
-    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
-        :=False, Transpose:=False
-        
-    Sheets("ETW Roster").Select
-    Range("D10:V10").Select
-    Range(Selection, Selection.End(xlDown)).Select
-    Application.CutCopyMode = False
-    Selection.Copy
-    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
-        :=False, Transpose:=False
-        
-    Sheets("Chargebacks").Select
-    Range("E6:AC6").Select
-    Range(Selection, Selection.End(xlDown)).Select
-    Application.CutCopyMode = False
-    Selection.Copy
-    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
-        :=False, Transpose:=False
-        
-    Sheets("Cap Labor").Select
-    Range("D9:U58").Select
-    Application.CutCopyMode = False
-    Selection.Copy
-    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
-        :=False, Transpose:=False
-        
-    Sheets("SW-HW_OTHER EXP").Select
-    Range("E7:Z56").Select
-    Application.CutCopyMode = False
-    Selection.Copy
-    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
-        :=False, Transpose:=False
-        
-    Sheets("CAPITAL & DEPRECIATION").Select
-    Range("D9:H9").Select
-    Range(Selection, Selection.End(xlDown)).Select
-    Application.CutCopyMode = False
-    Selection.Copy
-    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
-        :=False, Transpose:=False
-    Range("J9:M9").Select
-    Range(Selection, Selection.End(xlDown)).Select
-    Application.CutCopyMode = False
-    Selection.Copy
-    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
-        :=False, Transpose:=False
-    Range("N5:Z5").Select
-    Application.CutCopyMode = False
-    Selection.Copy
-    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
-        :=False, Transpose:=False
-
-End Sub
