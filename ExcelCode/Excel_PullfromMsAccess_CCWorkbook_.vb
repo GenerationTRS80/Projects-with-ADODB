@@ -7,8 +7,6 @@ Public Sub aaMain_Set_Workbook_Data_Sources(xlWorksheet_Control As Excel.Workshe
 '***************************************************************************************************
 '*
 '*  NOTES
-'*  Update by: Phil Seiersen 11/15/2018 Contact info: www.pseiersen.com
-'*  Created by Jason McCracken (ETW) on 9/21/08 - jason_mccracken@hotmail.com
 '*
  
  'Local Variables
